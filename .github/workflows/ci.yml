@@ -10,11 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6.6
-      - name: Install
-        run: bundle install --without production
-      - name: Run tests
-        run: rails test
+      - run: echo $RAILS_ENV
+      # - name: Setup Ruby
+      #   uses: ruby/setup-ruby@v1
+      #   with:
+      #     ruby-version: 2.6.6
+      # - name: Install
+      #   run: bundle install --without production
+      # - name: Run tests
+      #   run: rails test

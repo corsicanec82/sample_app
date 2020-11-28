@@ -9,7 +9,8 @@ gem 'sass-rails', '~> 6.0.0'
 gem 'webpacker', '~> 4.3.0'
 gem 'turbolinks', '~> 5.2.1'
 gem 'jbuilder', '~> 2.10.1'
-gem 'bootsnap', '>= 1.5.1', require: false
+gem 'bootsnap', '~> 1.5.1', require: false
+gem 'bootstrap-sass', '~> 3.4.1'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4.2'

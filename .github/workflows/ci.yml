@@ -15,6 +15,6 @@ jobs:
         with:
           ruby-version: 2.6.6
       - name: Install
-        run: boundle install --without production
+        run: bundle install --without production
       - name: Run tests
         run: rails test

@@ -2,6 +2,10 @@ name: Ruby CI
 
 on:
   - push
+  - pull_request
+
+env:
+  RAILS_ENV: test
 
 jobs:
   build:
@@ -10,12 +14,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: echo $RAILS_ENV
-      # - name: Setup Ruby
-      #   uses: ruby/setup-ruby@v1
-      #   with:
-      #     ruby-version: 2.6.6
-      # - name: Install
-      #   run: bundle install --without production
-      # - name: Run tests
-      #   run: rails test
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.6
+      - name: Install
+        run: bundle install --without production
+      - name: Run tests
+        run: rails test
